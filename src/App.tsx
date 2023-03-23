@@ -4,10 +4,11 @@ import "./App.css";
 import { PrivateRoute } from "./components/router";
 import { Login } from "./pages/Account";
 import { Admin } from "./pages/Admin";
+import { Notfound } from "./pages/Notfound";
 import "./styles/sb-admin-2.min.css";
 
 function App() {
-    const isLogin = false
+    const isLogin = true;
     const router = createBrowserRouter([
         {
             path: "/",
@@ -20,8 +21,12 @@ function App() {
             ],
         },
         {
-            path: "/login",
+            path: "login",
             element: <Login />,
+        },
+        {
+            path: "*",
+            element: <Notfound />,
         },
     ]);
     return (

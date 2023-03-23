@@ -1,9 +1,11 @@
-import { Navigate, Outlet, RouteProps } from 'react-router-dom';
+import { Navigate, Outlet, RouteProps } from "react-router-dom";
 
-export const PrivateRoute = ({ auth, ...rest }: {auth:boolean}& RouteProps): JSX.Element => {
+export const PrivateRoute = ({
+    auth,
+    ...rest
+}: { auth: boolean } & RouteProps): JSX.Element => {
     if (auth) {
         return <Outlet />;
     }
-
-    return <Navigate to='/login' replace />
+    return <Navigate to="/login" replace />;
 };
