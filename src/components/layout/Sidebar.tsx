@@ -13,7 +13,7 @@ import {
     SecurityUser,
     UserEdit,
 } from "iconsax-react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Emloyees } from "../../pages/Emloyees";
 export const Sidebar = () => {
     return (
@@ -50,10 +50,7 @@ export const Sidebar = () => {
                     Quản lý nhân sự
                 </div>
                 <li className="nav-item">
-                    <Routes>
-                        <Route path="employees" element={<Emloyees />} />
-                    </Routes>
-                    <a className="nav-link" href="#">
+                    <Link to="emloyees" className="nav-link">
                         <Personalcard
                             size="20"
                             color="white"
@@ -61,7 +58,7 @@ export const Sidebar = () => {
                             style={{ marginRight: "8" }}
                         />
                         <span>Danh sách nhân sự</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
