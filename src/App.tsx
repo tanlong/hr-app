@@ -5,7 +5,7 @@ import { PrivateRoute } from "./components/router";
 import { Login } from "./pages/Account";
 import { Admin } from "./pages/Admin";
 import { Notfound } from "./pages/Notfound";
-import "./styles/sb-admin-2.min.css";
+import "./styles/sb-admin-2.css";
 
 function App() {
     const isLogin = true;
