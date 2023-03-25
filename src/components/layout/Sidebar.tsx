@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import {
     ArrowCircleLeft2,
     Briefcase,
@@ -11,10 +10,10 @@ import {
     Personalcard,
     PresentionChart,
     SecurityUser,
-    UserEdit,
+    UserEdit
 } from "iconsax-react";
-import { Link, Route, Routes } from "react-router-dom";
-import { Emloyees } from "../../pages/Emloyees";
+import { Fragment } from "react";
+import { Link } from "react-router-dom";
 export const Sidebar = () => {
     return (
         <Fragment>
@@ -35,7 +34,7 @@ export const Sidebar = () => {
                 </a>
                 {/* Nav Item - Dashboard */}
                 <li className="nav-item active">
-                    <a className="nav-link" href="#">
+                    <Link to="" className="nav-link">
                         <PresentionChart
                             size="20"
                             color="white"
@@ -43,14 +42,14 @@ export const Sidebar = () => {
                             style={{ marginRight: "8" }}
                         />
                         <span>Thống kê</span>
-                    </a>
+                    </Link>
                 </li>
                 {/* Heading */}
                 <div className="sidebar-heading heading-main">
                     Quản lý nhân sự
                 </div>
                 <li className="nav-item">
-                    <Link to="emloyees" className="nav-link">
+                    <Link to="/emloyees" className="nav-link">
                         <Personalcard
                             size="20"
                             color="white"
@@ -61,7 +60,7 @@ export const Sidebar = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link to="/timekeeping" className="nav-link">
                         <FingerScan
                             size="20"
                             color="white"
@@ -69,7 +68,7 @@ export const Sidebar = () => {
                             style={{ marginRight: "8" }}
                         />
                         <span>Chấm công</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">

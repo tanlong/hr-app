@@ -1,5 +1,5 @@
-import React from "react";
-
 export const Emloyees = () => {
-    return <div>Emloyees</div>;
+    return <div>
+        Employee
+    </div>;
 };

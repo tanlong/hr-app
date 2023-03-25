@@ -4,7 +4,9 @@ import "./App.css";
 import { PrivateRoute } from "./components/router";
 import { Login } from "./pages/Account";
 import { Admin } from "./pages/Admin";
+import { Emloyees } from "./pages/Emloyees";
 import { Notfound } from "./pages/Notfound";
+import { Timekeeping } from "./pages/Timekeeping";
 import "./styles/sb-admin-2.css";
 
 function App() {
@@ -18,6 +20,14 @@ function App() {
                     index: true,
                     element: <Admin />,
                 },
+                {
+                    path: "emloyees",
+                    element: <Emloyees />,
+                },
+                {
+                    path: "timekeeping",
+                    element: <Timekeeping />,
+                },
             ],
         },
         {
@@ -28,6 +38,8 @@ function App() {
             path: "*",
             element: <Notfound />,
         },
+        // Quản lý nhân sự
+
     ]);
     return (
         <div className="App" id="wrapper">

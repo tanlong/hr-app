@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { Mainlayout } from "../layout/Mainlayout";
 
 export const PrivateRoute = ({
     auth,
@@ -7,7 +8,13 @@ export const PrivateRoute = ({
     auth: boolean;
 }): JSX.Element => {
     if (auth) {
-        return <Outlet />;
+        return (
+            <Mainlayout >
+                <Outlet />
+            </Mainlayout >
+        );
+
+
     }
     return <Navigate to="/login" replace />;
 };
